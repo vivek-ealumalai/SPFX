@@ -1,15 +1,8 @@
 {
     "$schema": "https://dev.office.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
     "workingDir": "./temp/deploy/",
-    "account": "12077engg01",
-    "container": "poc-webpart",
-    "accessKey": "yIScc+Lwm8exNk1F/8kYe4OuMaIzyXHgj7WcVqWGMKT4KkdGd3aNb2QVQo25FvJItuokCoHiI/7SSHmsGLzzPg=="
+    "account": "",
+    "container": "",
+    "accessKey": ""
 }
 
-// {
-//     "$schema": "https://dev.office.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
-//     "workingDir": "./temp/deploy/",
-//     "account": "2513storageaccount",
-//     "container": "poc-webpart",
-//     "accessKey": "+oCYsnJq/OfPr2myR+1ZQayz7kSuJgtOV5gBJcz50uhBYcIoFh9Ju8I9VUtil/Dz/kv4PRGLcv1JPk3zLgFqxg=="
-// }
