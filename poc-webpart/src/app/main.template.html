@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="../../node_modules/office-ui-fabric/dist/css/fabric.min.css" />
+<link rel="stylesheet" href="../../node_modules/office-ui-fabric/dist/css/fabric.components.min.css" />
+<link rel="stylesheet" href="../../node_modules/office-ui-fabric/dist/components/ProgressIndicator/ProgressIndicator.css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<style>
+    img {
+        width: 100%;
+    }
+    
+    .title-wrapper {
+        position: absolute;
+        color: white;
+        background-color: black;
+        opacity: 0.7;
+        bottom: 30px;
+        width: 97%;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .popover-title {
+        color: black;
+    }
+    
+    .popover-description {
+        width: 200px;
+        color: black;
+        z-index: 5060;
+    }
+    
+    .rootDiv {
+        width: 100%;
+    }
+    
+    .textpanel-icon {
+        position: absolute;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        float: right;
+        left: 90%;
+        bottom: 45px;
+    }
+</style>
+<div class="rootDiv" data-ng-controller="PocController as ctrl">
+    <!-- <uif-progress-indicator uif-name="test" uif-descriptio="test desc" uif-percent-complete="75"></uif-progress-indicator>
+ -->
+    <!-- <uif-spinner ng-show="ctrl.showSpinner" uif-size="large"></uif-spinner> -->
+    <div>
+        <a role="button" href="{{ctrl.Link}}" target="{{ctrl.Target}}">
+            <img role="presentation" alt="No Img" src="{{ctrl.ImageUrl}}"> </a>
+        <div class="title-wrapper" style="width:{{ctrl.WrapperWidth}} !important">
+            <div style="padding:2%">
+                <span class="textpanel-title">{{ctrl.Title}}</span>
+            </div>
+        </div>
+        <span class="textpanel-icon" style="bottom:{{ctrl.iconBottom}} !important">
+                <i class="ms-Icon ms-Icon--Info" aria-hidden="true" popover-placement="right auto" popover-title="{{ctrl.Title}}" uib-popover-template="'popover-partial.html'" popover-trigger="'mouseenter'"></i>
+            </span>
+    </div>
+</div>
+
+<script type="text/ng-template" id="popover-partial.html">
+    <div class="popover-description">
+        <p>{{ctrl.PopoverText}}</p>
+    </div>
+</script>
