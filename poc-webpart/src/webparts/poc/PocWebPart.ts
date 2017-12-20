@@ -22,13 +22,14 @@ export interface IPocWebPartProps {
 
 export default class PocWebPartWebPart extends BaseClientSideWebPart<IPocWebPartProps> {
   private $injector: angular.auto.IInjectorService;
-  public isInArray(value, array) : boolean {
-    let found : boolean= false;
-    array.forEach(element => {
-      if (element == value ) {
+  public isInArray(value, array): boolean {
+    let found: boolean = false;
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] == value) {
         found = true;
-      }     
-    });
+        break;
+      }
+    }
     return found;
   }
   public render(): void {
@@ -38,25 +39,26 @@ export default class PocWebPartWebPart extends BaseClientSideWebPart<IPocWebPart
 
       try {
         elementTxt = this.domElement.parentElement.parentElement.parentElement.parentElement.classList; // get the column count in a section
+        if (elementTxt) {
+          if (this.isInArray("ms-xl6", elementTxt)) {
+            columnSection = 2;
+          }
+          else if (this.isInArray("ms-xl2", elementTxt)) {
+            columnSection = 1;
+          }
+          else if (this.isInArray("ms-xl4", elementTxt)) {
+            columnSection = 3;
+          }
+        }
+
+        this.domElement.innerHTML = require<string>("../../app/main.template.html");
+        this.$injector = angular.bootstrap(this.domElement, ['myPocApp']);
       }
       catch (e) {
+        console.log(e);
+      }
 
-      }
-      
-      if (elementTxt) {
-        if (this.isInArray("ms-xl6",elementTxt)) {
-          columnSection = 2;
-        }
-        else if (this.isInArray("ms-xl2",elementTxt)) {
-          columnSection = 1;
-        }
-        else if (this.isInArray("ms-xl4",elementTxt)) {
-          columnSection = 3;
-        }
-      }
-      
-      this.domElement.innerHTML = require<string>("../../app/main.template.html");
-      this.$injector = angular.bootstrap(this.domElement, ['myPocApp']);
+
     }
     this.$injector.get('$rootScope').$broadcast('configurationChanged', {
       description: this.properties.description,
