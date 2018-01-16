@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.0",
+    "libraryName": "calc-webpart",
+    "libraryId": "64a6a0b9-3d1c-4135-83bb-d36a443fee60",
+    "environment": "spo"
+  }
+}

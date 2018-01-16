@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "calc-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/calc/CalcWebPart.js",
+          "manifest": "./src/webparts/calc/CalcWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CalcWebPartStrings": "lib/webparts/calc/loc/{locale}.js"
+  }
+}

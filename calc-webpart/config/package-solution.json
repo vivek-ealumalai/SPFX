@@ -1,0 +1,13 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "calc-webpart-client-side-solution",
+    "id": "64a6a0b9-3d1c-4135-83bb-d36a443fee60",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/calc-webpart.spapp"
+  }
+}

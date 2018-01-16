@@ -1,0 +1,4 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/write-manifests.schema.json",
+  "cdnBasePath": "https://publiccdn.sharepointonline.com/infyakash.sharepoint.com/162100695cd100a5e5085aaf1dbb68cfa77e746fed56bc10faeb8a741185cfb1f2ed466b/Check"
+}
